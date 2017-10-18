@@ -4,6 +4,8 @@ files:
   - source: /
     destination: /home/ec2-user/codedeploy
 hooks:
+  BeforeInstall:
+    - location: scripts/codedeploy_beforeinstall.sh
   ApplicationStart:
     - location: scripts/codedeploy_start.sh
       timeout: 180
